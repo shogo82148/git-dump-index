@@ -87,7 +87,6 @@ int main() {
     }
 
     uint32_t hdr_entries = ntohl(header->hdr_entries);
-    uint32_t sd_dev = htonl(st.st_dev);
     for (uint32_t i = 0; i < hdr_entries; i++) {
         struct cache_entry *entry = (struct cache_entry*)ptr_entry;
         printf("name: %s\n", entry->name);
